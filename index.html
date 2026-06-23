@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Татьяна — 24 июня 1962</title>
+  <style>
+    :root{
+      --bg:#f5efe6;
+      --paper:#fbf7f1;
+      --text:#2c241f;
+      --muted:#6d5b4f;
+      --accent:#9c6b4f;
+      --accent-2:#c89f7a;
+      --line:rgba(44,36,31,.12);
+      --shadow:0 20px 60px rgba(44,36,31,.12);
+      --radius:22px;
+      --radius-sm:16px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: "Georgia", "Times New Roman", serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(200,159,122,.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(156,107,79,.10), transparent 22%),
+        linear-gradient(180deg, #f7f2ea 0%, #f3ede4 100%);
+      line-height:1.65;
+    }
+
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+
+    .wrap{
+      width:min(calc(100% - 28px), var(--max));
+      margin:0 auto;
+    }
+
+    .hero{
+      min-height:100svh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      padding:28px 0 34px;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(245,239,230,.35), rgba(245,239,230,.92)),
+        url("98blijyvdyhsixqd_1024.jpg") center/cover no-repeat;
+      filter:grayscale(100%);
+      opacity:.28;
+      transform:scale(1.04);
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      width:100%;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:28px;
+      align-items:end;
+    }
+
+    .hero-card,
+    .intro-card,
+    .section-card,
+    .closing{
+      background:rgba(251,247,241,.74);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border:1px solid rgba(255,255,255,.45);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+    }
+
+    .hero-card{
+      padding:28px;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      font-size:12px;
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+
+    h1,h2,h3{
+      margin:0 0 14px;
+      line-height:1.08;
+      font-weight:700;
+    }
+
+    h1{
+      font-size:clamp(34px, 7vw, 86px);
+      max-width:10ch;
+    }
+
+    .lead{
+      font-size:clamp(18px, 2.8vw, 24px);
+      color:#3b312b;
+      margin:0 0 18px;
+      max-width:48rem;
+    }
+
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:22px;
+    }
+
+    .chip{
+      border:1px solid var(--line);
+      padding:9px 14px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+      background:rgba(255,255,255,.46);
+    }
+
+    .hero-side{
+      display:grid;
+      gap:14px;
+    }
+
+    .quote-box{
+      padding:22px;
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(156,107,79,.96), rgba(124,85,62,.96));
+      color:#fff7f0;
+      box-shadow:var(--shadow);
+    }
+
+    .quote-box p{
+      margin:0;
+      font-size:clamp(18px, 2.2vw, 24px);
+      line-height:1.45;
+    }
+
+    .fact-box{
+      padding:20px 22px;
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.76);
+      border:1px solid rgba(44,36,31,.09);
+    }
+
+    .fact-box strong{
+      display:block;
+      font-size:15px;
+      margin-bottom:8px;
+      color:var(--accent);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    main{
+      padding:20px 0 60px;
+    }
+
+    .intro-card{
+      padding:28px;
+      margin-bottom:18px;
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin-top:22px;
+    }
+
+    .intro-item{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+      background:rgba(255,255,255,.5);
+    }
+
+    .intro-item span{
+      display:block;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:var(--muted);
+      margin-bottom:8px;
+    }
+
+    section{
+      margin-top:18px;
+    }
+
+    .section-card{
+      padding:24px;
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:16px;
+      margin-bottom:18px;
+      padding-bottom:14px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .section-head p{
+      margin:0;
+      max-width:42rem;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    h2{
+      font-size:clamp(28px, 4vw, 52px);
+      margin-bottom:8px;
+    }
+
+    .story{
+      font-size:18px;
+      color:#352d27;
+    }
+
+    .story p{
+      margin:0 0 16px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .note,
+    .mini-card{
+      background:rgba(255,255,255,.54);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+    }
+
+    .mini-card h3{
+      font-size:18px;
+      margin-bottom:8px;
+    }
+
+    .mini-card p,
+    .note p{
+      margin:0;
+      color:#4f433a;
+      font-size:15px;
+    }
+
+    .timeline{
+      display:grid;
+      gap:12px;
+    }
+
+    .timeline-item{
+      display:grid;
+      grid-template-columns:88px 1fr;
+      gap:14px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:15px;
+      background:rgba(255,255,255,.52);
+    }
+
+    .time{
+      font-size:13px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--accent);
+      padding-top:4px;
+    }
+
+    .timeline-item p{
+      margin:0;
+      font-size:15px;
+      color:#41362f;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .photo{
+      position:relative;
+      overflow:hidden;
+      border-radius:20px;
+      cursor:pointer;
+      background:#e7ddd2;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(44,36,31,.08);
+      min-height:240px;
+    }
+
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:grayscale(100%);
+      transition:transform .5s ease, opacity .35s ease;
+    }
+
+    .photo:hover img{
+      transform:scale(1.04);
+    }
+
+    .photo figcaption{
+      position:absolute;
+      left:0; right:0; bottom:0;
+      padding:16px;
+      color:#fff;
+      background:linear-gradient(180deg, transparent, rgba(20,15,12,.74));
+      font-size:14px;
+      line-height:1.45;
+    }
+
+    .span-7{grid-column:span 7}
+    .span-5{grid-column:span 5}
+    .span-4{grid-column:span 4}
+    .span-6{grid-column:span 6}
+    .span-8{grid-column:span 8}
+
+    ul.clean{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
+    }
+
+    ul.clean li{
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.48);
+      font-size:15px;
+      color:#41362f;
+    }
+
+    .numbers{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+
+    .num{
+      padding:16px;
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.46));
+      border:1px solid var(--line);
+    }
+
+    .num strong{
+      display:block;
+      font-size:28px;
+      margin-bottom:6px;
+      color:var(--accent);
+    }
+
+    .num span{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .closing{
+      margin-top:18px;
+      padding:30px 24px;
+      text-align:center;
+    }
+
+    .closing p{
+      margin:0 auto 14px;
+      max-width:760px;
+      font-size:18px;
+    }
+
+    .signature{
+      margin-top:10px;
+      color:var(--muted);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:12px;
+    }
+
+    .footer-space{
+      height:30px;
+    }
+
+    .lightbox{
+      position:fixed;
+      inset:0;
+      background:rgba(14,12,11,.88);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      z-index:999;
+    }
+
+    .lightbox.active{
+      display:flex;
+    }
+
+    .lightbox-inner{
+      width:min(100%, 1100px);
+      max-height:100%;
+      position:relative;
+    }
+
+    .lightbox img{
+      width:100%;
+      max-height:86svh;
+      object-fit:contain;
+      border-radius:18px;
+      box-shadow:0 30px 80px rgba(0,0,0,.35);
+    }
+
+    .lightbox-caption{
+      color:#f7eee6;
+      margin-top:12px;
+      text-align:center;
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .lightbox-close{
+      position:absolute;
+      top:-10px;
+      right:-2px;
+      width:42px;
+      height:42px;
+      border:none;
+      border-radius:999px;
+      background:rgba(255,255,255,.14);
+      color:white;
+      font-size:28px;
+      cursor:pointer;
+      line-height:1;
+    }
+
+    @media (max-width: 980px){
+      .hero-inner,
+      .grid-2,
+      .intro-grid,
+      .grid-3,
+      .numbers{
+        grid-template-columns:1fr;
+      }
+
+      .gallery{
+        grid-template-columns:1fr;
+      }
+
+      .span-7,.span-5,.span-4,.span-6,.span-8{
+        grid-column:span 1;
+      }
+
+      .timeline-item{
+        grid-template-columns:1fr;
+      }
+
+      .section-head{
+        align-items:start;
+        flex-direction:column;
+      }
+
+      .hero{
+        min-height:auto;
+        padding-top:16px;
+      }
+
+      .hero-card{
+        padding:22px 18px;
+      }
+
+      .section-card,
+      .intro-card,
+      .closing{
+        padding:20px 16px;
+      }
+    }
+
+    @media (max-width: 560px){
+      body{
+        line-height:1.58;
+      }
+
+      .wrap{
+        width:min(calc(100% - 18px), var(--max));
+      }
+
+      .eyebrow{
+        font-size:11px;
+      }
+
+      .lead{
+        font-size:18px;
+      }
+
+      .story{
+        font-size:17px;
+      }
+
+      .photo{
+        min-height:220px;
+      }
+
+      .chip{
+        font-size:12px;
+        padding:8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div class="hero-card">
+        <div class="eyebrow">24 июня 1962 • Кронштадт • воскресенье</div>
+        <h1>Татьяна — день, когда мир продолжал жить, а история обрела сердце</h1>
+        <p class="lead">
+          В это июньское утро мир не остановился ни на секунду: где-то начиналась велогонка,
+          где-то звучала музыка, где-то кипела большая политика, а в Кронштадте появилась на свет девочка,
+          которой суждено было стать Татьяной — Танечкой, Танюшей, человеком своей эпохи и своей семьи.
+        </p>
+        <div class="hero-meta">
+          <div class="chip">Родилась 24.06.1962</div>
+          <div class="chip">Город рождения — Кронштадт</div>
+          <div class="chip">История эпохи и судьбы</div>
+          <div class="chip">Адаптивный семейный лендинг</div>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="quote-box">
+          <p>
+            Пока мир проживал обычный и одновременно большой день июня 1962 года,
+            в его ритм тихо вошла новая жизнь — маленькая Танечка, которой предстояло
+            однажды наполнить этот мир своим характером, теплом и памятью.
+          </p>
+        </div>
+        <div class="fact-box">
+          <strong>Замысел</strong>
+          <div>
+            Эта история собрана как живая ткань времени: день рождения Татьяны вплетён в события мира,
+            страны, морского города, музыку, быт, моду и ту атмосферу, из которой вырастала целая жизнь.
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="intro-card">
+      <div class="eyebrow">Начало истории</div>
+      <h2>Когда родилась Таня</h2>
+      <div class="story">
+        <p>
+          24 июня 1962 года было воскресеньем — днём, когда люди жили новостями, поездками, разговорами на кухнях,
+          спортивными сводками, радиоэфиром и ожиданием лета. В этот день мир не знал, что в Кронштадте родилась
+          Татьяна, но именно так и бывает с настоящими историями: сначала они приходят тихо, а потом становятся
+          частью семейной вселенной.
+        </p>
+        <p>
+          Её рождение можно представить не как отдельную точку, а как красивое включение в поток времени:
+          в большой 1962 год, наполненный напряжением холодной войны, разговорами о будущем, космической гонкой,
+          переменами в культуре и тем особым советским ощущением, когда повседневность и история шли рядом.
+        </p>
+      </div>
+
+      <div class="intro-grid">
+        <div class="intro-item">
+          <span>Имя</span>
+          Татьяна — серьёзно, тепло, с достоинством; а в первых главах жизни — Таня, Танечка, Танюша.
+        </div>
+        <div class="intro-item">
+          <span>Дата</span>
+          24 июня 1962 года — разгар лета, светлое время длинного дня и морского воздуха.
+        </div>
+        <div class="intro-item">
+          <span>Место</span>
+          Кронштадт — город якорей, фортификаций, ветра, моряков и особой северной стойкости.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Ритм дня</div>
+            <h2>24 июня 1962</h2>
+          </div>
+          <p>
+            День рождения Татьяны можно читать как киноленту, где рядом существуют частное чудо и большой исторический фон.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time">Утро</div>
+            <p>
+              В Европе начинался очередной летний день, а во Франции стартовал Тур де Франс 1962 года.
+              Где-то уже следили за спортивными новостями, и сама эпоха двигалась вперёд — быстро, азартно, с ощущением скорости.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="time">День</div>
+            <p>
+              Мир жил после бурного начала июня: ещё были свежи последствия новочеркасских событий, в международной политике
+              нарастало напряжение, а холодная война всё сильнее определяла нерв времени. На этом фоне появление новой жизни
+              звучит особенно светло и упрямо.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="time">Вечер</div>
+            <p>
+              В домах могли слушать радио, обсуждать бытовые новости, планы на отпуск, цены, знакомых и лето.
+              И где-то в этом простом семейном свете уже лежала маленькая Танечка — ещё совсем крошечная, но уже своя,
+              уже любимая, уже важнее всех мировых сводок.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Мир и страна</div>
+            <h2>Эпоха вокруг неё</h2>
+          </div>
+          <p>
+            1962 год был годом, в котором тревога и надежда существовали одновременно.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="story">
+            <p>
+              Мир жил в напряжении холодной войны. В июне уже обсуждались стратегические решения,
+              связанные с будущим Карибского кризиса, а политический воздух становился всё плотнее.
+              Но парадокс эпохи был в том, что рядом со страхом жила и вера в прогресс.
+            </p>
+            <p>
+              Космическая гонка разогревала воображение планеты: 1962 год вообще воспринимался как время,
+              когда человечество всё чаще смотрело не только на границы государств, но и в небо.
+              Это был мир, который спорил, состязался, строил, запускал, открывал и мечтал.
+            </p>
+            <p>
+              В Советском Союзе страной руководил Никита Хрущёв. После резкого повышения цен на мясо и масло
+              начало июня оказалось тяжёлым и тревожным, однако официальная картина жизни всё равно продолжала
+              говорить языком будущего, труда, достижений и уверенности в завтрашнем дне.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <div class="mini-card">
+              <h3>Холодная война</h3>
+              <p>Большая политика уже подводила мир к одному из самых опасных кризисов XX века.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Космос</h3>
+              <p>1962 год ощущался как звёздный: космос был не абстракцией, а символом будущего.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Технологии</h3>
+              <p>Мир говорил о телевидении, вычислительных машинах, новых средствах связи и скорости.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Спорт</h3>
+              <p>Июнь жил футболом, велоспортом, рекордами и культом сильных, ярких чемпионов.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Культура</h3>
+              <p>1962 был временем, когда музыка, кино и мода стремительно меняли повседневный образ мира.</p>
+            </div>
+            <div class="mini-card">
+              <h3>Смысл для Тани</h3>
+              <p>Татьяна родилась не на фоне тишины, а внутри большого и нервного, но очень живого времени.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="numbers">
+          <div class="num">
+            <strong>1962</strong>
+            <span>Год больших ожиданий, политического напряжения и культурной энергии.</span>
+          </div>
+          <div class="num">
+            <strong>24 июня</strong>
+            <span>День, который стал личной датой семьи и частью истории Кронштадта.</span>
+          </div>
+          <div class="num">
+            <strong>Воскресенье</strong>
+            <span>Мягкий ритм выходного дня, в который особенно чувствуется семейное событие.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Родной город</div>
+            <h2>Кронштадт и море</h2>
+          </div>
+          <p>
+            Для этой истории особенно важно, что Таня родилась не просто в городе, а в морском характере России.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="story">
+            <p>
+              Кронштадт — это не только карта и дата. Это город с особой выправкой: островной,
+              ветреный, строгий и одновременно очень человеческий. Здесь всегда рядом море, флот,
+              камень, соборы, причалы, чайки и чувство, что жизнь связана с чем-то большим, чем обычный двор.
+            </p>
+            <p>
+              В июне такой город живёт особенно красиво: длинный свет, вода, запах нагретого камня,
+              морская прохлада и движение кораблей. И хочется представить, что в день, когда родилась Танюша,
+              Кронштадт встретил её как умеет только он — сдержанно, свежо, по-северному благородно.
+            </p>
+            <p>
+              Для ребёнка, рождённого здесь, сам город будто заранее даёт черты характера:
+              стойкость, глубину, внутреннюю дисциплину, любовь к дому и умение держаться спокойно даже тогда,
+              когда вокруг переменчивый ветер.
+            </p>
+          </div>
+
+          <div class="note">
+            <p>
+              Кронштадт в этой истории — не просто место рождения, а первый соавтор судьбы Татьяны:
+              город моряков, семейной памяти, большого горизонта и крепкого северного света.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure class="photo span-7" data-full="hjlljv.jpg" data-caption="Кронштадтский портовый силуэт, морская служба и тяжёлое июньское небо — точная атмосфера города, в котором родилась Татьяна.">
+            <img src="hjlljv.jpg" alt="Кронштадт, орудие и корабли" loading="lazy">
+            <figcaption>Кронштадт — город моря, службы и внутренней стойкости. Нажмите, чтобы увеличить.</figcaption>
+          </figure>
+
+          <figure class="photo span-5" data-full="707eaa4a98bbf76c_1024.jpg" data-caption="Старый морской Кронштадт, собор и городская память — образ глубины, преемственности и корней.">
+            <img src="707eaa4a98bbf76c_1024.jpg" alt="Старый Кронштадт" loading="lazy">
+            <figcaption>Город с историей, которая старше поколений. Нажмите, чтобы увеличить.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Музыка и экран</div>
+            <h2>Что звучало вокруг</h2>
+          </div>
+          <p>
+            Музыка и кино в 1962 году были не фоном, а настоящим языком времени.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <ul class="clean">
+              <li>По миру уже разлетались хиты начала шестидесятых: танцевальные ритмы, лёгкая эстрада, новые молодёжные интонации.</li>
+              <li>В СССР люди жили голосами радио, пластинками, оркестрами, песнями о любви, дороге, море и светлом будущем.</li>
+              <li>Год 1962 в мировой культуре запомнился как время обновления киноязыка и появления новых экранных героев.</li>
+              <li>Телевидение становилось всё заметнее, а домашний приёмник был центром вечера, новостей и семейных разговоров.</li>
+            </ul>
+          </div>
+
+          <div class="story">
+            <p>
+              Представить рождение Тани можно так: в одной комнате шепчутся взрослые, в другой кто-то
+              включает радио, и сквозь бытовую тишину проходят мелодии эпохи. Ещё нет личных воспоминаний,
+              но уже есть звуковая среда, в которой будет расти ребёнок.
+            </p>
+            <p>
+              Позже это станет важной частью памяти поколения: песни, которые слышали родители;
+              фильмы, которые обсуждали соседи; интонации дикторов; экран, вокруг которого собиралась семья.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure class="photo span-6" data-full="98blijyvdyhsixqd_1024.jpg" data-caption="Образ советской публичной жизни начала 1960-х: лица эпохи, официальные встречи, ощущение движения страны и времени.">
+            <img src="98blijyvdyhsixqd_1024.jpg" alt="Эпоха 1960-х" loading="lazy">
+            <figcaption>Большая страна жила торжественными сюжетами и верой в движение вперёд. Нажмите, чтобы увеличить.</figcaption>
+          </figure>
+
+          <figure class="photo span-6" data-full="deti.jpg" data-caption="Дети на фоне кораблей — точный образ будущего детства Танечки: морской воздух, движение, свет и радость простого лета.">
+            <img src="deti.jpg" alt="Дети в Кронштадте" loading="lazy">
+            <figcaption>Такой могла быть сама интонация её ранних лет — светлая, подвижная, морская. Нажмите, чтобы увеличить.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Быт эпохи</div>
+            <h2>Мода, стол, подарки</h2>
+          </div>
+          <p>
+            Личную историю оживляют не только события мира, но и то, как люди одевались, ели, дарили и мечтали.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="mini-card">
+            <h3>Мода</h3>
+            <p>
+              Женские силуэты начала 1960-х становились легче и изящнее: приталенные платья, аккуратные воротнички,
+              лодочки, короткие жакеты, причёски с объёмом. Всё было ещё сдержанно, но уже с чувством нового времени.
+            </p>
+          </div>
+          <div class="mini-card">
+            <h3>На столах</h3>
+            <p>
+              Праздничная советская кухня держалась на домашней щедрости: салаты, котлеты, картофель, пироги,
+              компоты, чай, конфеты и всё лучшее, что можно было собрать для семейного события.
+            </p>
+          </div>
+          <div class="mini-card">
+            <h3>Подарки</h3>
+            <p>
+              Дарили часы, духи, красивые ткани, сервизы, игрушки, книги, полезные вещи для дома —
+              то, что служило долго и хранило память.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid-2" style="margin-top:18px;">
+          <div>
+            <ul class="clean">
+              <li>Средняя зарплата в СССР начала 1960-х — примерно в районе 80–100 рублей в месяц.</li>
+              <li>После июньского повышения 1962 года тема цен на продукты была очень чувствительной для страны.</li>
+              <li>Праздничный стол измерялся не модой, а заботой: чем больше тепла, тем богаче считался дом.</li>
+            </ul>
+          </div>
+          <div class="story">
+            <p>
+              И потому история рождения Татьяны должна звучать не только торжественно, но и по-домашнему.
+              Возможно, кто-то принёс цветы, кто-то передал пелёнки, кто-то шёпотом сказал:
+              «Какая хорошенькая Танечка». Так эпоха входит в семью — через вещи, жесты, еду и заботу.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Книги, наука, транспорт</div>
+            <h2>Интеллектуальный фон</h2>
+          </div>
+          <p>
+            1962 год был не только политическим и музыкальным, но и очень любопытным к будущему.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="story">
+            <p>
+              Люди читали газеты, журналы, обсуждали международные события и верили в науку.
+              Эпоха была буквально влюблена в технический прогресс: ракеты, вычислительные машины,
+              новое телевидение, связь, медицина, инженерия — всё это воспринималось как дорога вперёд.
+            </p>
+            <p>
+              На улицах ещё царили знакомые послевоенные силуэты транспорта, но сама идея скорости уже становилась
+              культом времени. А для детей это означало особое детство: книги о путешествиях, технике, море,
+              героях, космосе и смелых людях были не развлечением, а формой воспитания мечты.
+            </p>
+          </div>
+
+          <div>
+            <ul class="clean">
+              <li>Газеты и журналы были главным источником новостей и общего разговора страны.</li>
+              <li>Наука ассоциировалась с престижем, государственным смыслом и почти романтической надеждой.</li>
+              <li>Космическая тема проникала в детство, школьные мечты, иллюстрации и разговоры взрослых.</li>
+              <li>Кронштадтский ребёнок особенно естественно вписывался в мир дисциплины, техники и горизонта.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Приметы и образ дня</div>
+            <h2>Июньская судьба</h2>
+          </div>
+          <p>
+            Народный взгляд всегда любил связывать характер человека со временем его прихода в мир.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="story">
+            <p>
+              Конец июня — это пора зрелого света, когда лето уже уверенно вступило в свои права.
+              О таких людях нередко говорили: они несут в себе жизненное тепло, внутреннюю стойкость,
+              домовитость и умение быть опорой другим.
+            </p>
+            <p>
+              Для Татьяны эта символика звучит особенно красиво: морской город, длинный июньский день,
+              воскресное рождение и имя, в котором есть и мягкость, и сила. Танечка пришла в мир в то время года,
+              когда всё тянется к свету, а значит, и её история с самого начала наполнена ощущением жизни.
+            </p>
+          </div>
+
+          <div class="note">
+            <p>
+              Если читать этот день образно, то Татьяна родилась под знаком длинного света:
+              не резкого, а надёжного; не шумного, а глубокого — такого, который не ослепляет,
+              а согревает.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <figure class="photo span-8" data-full="mqbotinl0hr6ks5o_1024.jpg" data-caption="Палата новорождённых — образ самого первого дня Татьяны, когда её история только началась и ещё помещалась в маленькую кроватку и тёплый свет окна.">
+            <img src="mqbotinl0hr6ks5o_1024.jpg" alt="Новорожденные" loading="lazy">
+            <figcaption>Так могла начинаться и её первая глава — тихо, светло, почти невесомо. Нажмите, чтобы увеличить.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="eyebrow">Финал истории</div>
+      <h2>Дорогая Татьяна</h2>
+      <p>
+        Ты появилась на свет 24 июня 1962 года в Кронштадте — в день, когда мир жил своим большим,
+        сложным и стремительным ритмом. И с той минуты у этого ритма появилось ещё одно измерение:
+        личное, семейное, любимое.
+      </p>
+      <p>
+        Когда родилась Таня, история не остановилась — но стала теплее. Потому что любой настоящий день,
+        даже самый исторический, по-настоящему запоминается тогда, когда в нём рождается человек,
+        которого потом любят всю жизнь.
+      </p>
+      <p>
+        Пусть в имени Татьяна всегда звучат и достоинство взрослой женщины, и нежность той самой Танечки,
+        с которой когда-то всё началось — в июньском свете, у моря, в родном Кронштадте.
+      </p>
+      <div class="signature">С любовью, через память времени и семьи</div>
+    </section>
+
+    <div class="footer-space"></div>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Закрыть">×</button>
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.photo').forEach(card => {
+      card.addEventListener('click', () => {
+        lightboxImg.src = card.dataset.full;
+        lightboxImg.alt = card.querySelector('img').alt || '';
+        lightboxCaption.textContent = card.dataset.caption || '';
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
